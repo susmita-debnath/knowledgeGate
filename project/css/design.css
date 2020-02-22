@@ -88,7 +88,7 @@
 	background-color: #544C4C;
 	border: none;
 	color: white;
-	padding: 4px 40px;
+	padding: 4px 30px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -213,4 +213,10 @@
 .header h3 {
 	text-align: center;
 	margin-left: 5px;
+}
+
+.first input[name=search] {
+	width: 300px;
+	margin-top: 20px;
+	margin-left: 130px;
 }

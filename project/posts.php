@@ -1,22 +1,18 @@
 <?php
-	include "lib/library.php";
+  include "lib/library.php";
+  global $con;
 
-	global $con;
-
-	$query = "SELECT * FROM course";
-	$a = mysqli_query($con, $query);
-	$b = mysqli_query($con, $query);
-
-
+  $query = "SELECT * FROM course";
+  $a = mysqli_query($con, $query);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Courses</title>
-	<link rel="stylesheet" type="text/css" href="css/design.css?<?php echo time(); ?>">
-	
-	<meta charset="utf-8" />
+  <title>My Courses</title>
+  <link rel="stylesheet" type="text/css" href="css/design.css?<?php echo time(); ?>">
+  
+  <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="assets/img/logo.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -24,7 +20,6 @@
    My Profile
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-
   <!-- Canonical SEO -->
   <!--
   <link rel="canonical" href="https://www.creative-tim.com/product/material-kit-pro" />
@@ -53,7 +48,7 @@
   <meta property="og:site_name" content="Creative Tim" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <!-- CSS Files -->
   <link href="assets/css/material-kit.mind1f1.css?v=2.2.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -61,10 +56,10 @@
   <link href="assets/demo/vertical-nav.css" rel="stylesheet" />
 
   <style>
-  	.header-filter:before,
-  	.index-page .header-filter:after{
-  		background: none !important;
-  	}
+    .header-filter:before,
+    .index-page .header-filter:after{
+      background: none !important;
+    }
   </style>
 
   <script src="https://kit.fontawesome.com/eb21b7e290.js" crossorigin="anonymous"></script>
@@ -86,10 +81,9 @@
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
   </script> -->
   <!-- End Google Tag Manager -->> 
-
 </head>
-<body>
-	
+<body><
+
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <nav class="navbar navbar-color-on-scroll navbar-white   fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
@@ -107,7 +101,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown nav-item">
-            <a href="index.php" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <i class="material-icons">apps</i> Home
             </a>
             <div class="dropdown-menu ">
@@ -167,27 +161,56 @@
     </div>
   </nav>
 
-  <div id="list">
-  	<h1>My Courses</h1>
-  	<table>
-  		<?php while($row = mysqli_fetch_assoc($a)) {
-  		?>
-  		<tr>
-  			<td><a href="subject.php"><?php echo $row['c_id'] . ' ' . $row['c_name']?></a></td>
-  		</tr>
-  		<?php } ?>
-  	</table>
-  	<h2>Choose Courses</h2>
- 		
-  	<div id="option">
-  		<label>
-		<select id="courses">
-		<?php while($row = mysqli_fetch_assoc($b)) { ?>
-		<option value="Courses"><?php echo $row['c_id'] . ' ' . $row['c_name']?></option>
-		<?php } ?>
-		</select>
-	</label>
-  	</div>	
+
+
+  <!-- <div id="full">
+    <div id="div1">
+      <p>hello</p>
+      <div id="line1"></div>
+    </div>
+    <div id="div2">
+      <p>hello</p>
+    </div>
+    <div id="div3">
+      <p>hello</p>
+    </div>
+  </div>
+ -->
+
+  <div class="box">
+    <div class="box1">
+      <a href="index.php" class="button">Home</a>
+      <a href="questions.php" class="questions">Question Bank</a>
+      <a href="#" class="books">Books</a>
+      <a href="#" class="links">Links</a><br><br><br><br><br><br><br>
+      <a href="index.php" class="courses">My Courses</a><br>
+      <table>
+        <?php while($row = mysqli_fetch_assoc($a)) {
+        ?>
+        <tr>
+          <td><a href="#"><?php echo $row['c_id'] ?></a></td>
+        </tr>
+        <?php } ?>
+      </table>
+    </div>
+    <div class="box2">
+      <div class="first">
+        <a href="subject.php"><h3>Top Questions</h3></a>
+         <button>Posts</button>
+        <input type="text" name="search" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome"/>
+      </div>
+      <div class="second">        
+        <button>
+          Sorted By:
+          <a href="#">Time</a> |
+          <a href="#">Views</a> |
+          <a href="#">Follow</a>
+        </button>
+      </div>
+    </div>
+    <div class="box3">
+      <h2>Group Chat</h2>
+    </div>
   </div>
 
 </body>

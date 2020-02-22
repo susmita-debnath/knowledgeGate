@@ -107,7 +107,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown nav-item">
-            <a href="index.php" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <i class="material-icons">apps</i> Home
             </a>
             <div class="dropdown-menu ">
@@ -173,7 +173,7 @@
   		<?php while($row = mysqli_fetch_assoc($a)) {
   		?>
   		<tr>
-  			<td><a href="subject.php"><?php echo $row['c_id'] . ' ' . $row['c_name']?></a></td>
+  			<td><a href="answer.php"><?php echo $row['c_id'] . ' ' . $row['c_name']?></a></td>
   		</tr>
   		<?php } ?>
   	</table>

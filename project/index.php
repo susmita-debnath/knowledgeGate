@@ -164,7 +164,7 @@
                     <p class="card-description">
                       This is good if your company size is between 2 and 10 Persons.
                     </p>
-                    <a href="courses." class="btn btn-info btn-round">Courses</a>
+                    <a href="courses.php" class="btn btn-info btn-round">Courses</a>
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@
                     <p class="card-description">
                       This is good if your company size is between 2 and 10 Persons.
                     </p>
-                    <a href="#pablo" class="btn btn-info btn-round">Answers</a>
+                    <a href="answer_courses.php" class="btn btn-info btn-round">Answers</a>
                   </div>
                 </div>
               </div>

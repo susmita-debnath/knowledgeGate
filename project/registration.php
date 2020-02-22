@@ -21,14 +21,27 @@
 
 					$password = md5($_POST['password']);
 
+					if ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+						$message = "Invalid email!";
+						echo $message; ?><br><?php
+						$valid = 0;
+					}
+
+					if ( $password != $retype ) {
+						$message = "Password is not same";
+						echo $message;?><br><?php
+						$valid = 0;
+					}
+
 					if ( $valid == 1 ) {
-						$query = "";
+						$query = "INSERT INTO student (`email`, `student_id`, ``)";
 					}
 				}
 			?>
 		</div>
 		<form method="post" enctype="multipart/form-data">
 			<input type="text" name="username" placeholder="Name" value="<?php echo isset($_POST['username']) ? $_POST['username'] : '' ?>"><br><br>
+			<input type="text" name="email" placeholder="Email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : '' ?>"><br><br>
 			<input type="password" name="password" placeholder="password" value="<?php echo isset($_POST['password']) ? $_POST['password'] : '' ?>"><br><br>
 			<input type="password" name="retype" placeholder="Retype Password" value="<?php echo isset($_POST['retype']) ? $_POST['retype'] : '' ?>"><br>
 			<h3>Select your profile photo:</h3><br>

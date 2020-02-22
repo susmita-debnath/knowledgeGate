@@ -48,7 +48,8 @@
   <meta property="og:site_name" content="Creative Tim" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <!-- CSS Files -->
   <link href="assets/css/material-kit.mind1f1.css?v=2.2.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -196,7 +197,8 @@
     <div class="box2">
       <div class="first">
         <button>Top Questions</button>
-        <a href="#"><h3>Posts</h3></a>
+        <a href="posts.php"><h3>Posts</h3></a>
+        <input type="text" name="search" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome">
       </div>
       <div class="second">        
         <button>
